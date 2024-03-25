@@ -1,11 +1,11 @@
 //  FUNCION
 
-function saludar () {
-    return "BIENVENIDOS A TECNOREX"
-}
+// function saludar () {
+//     return "BIENVENIDOS A TECNOREX"
+// }
 
-const saludo = saludar()
-console.log (saludo)
+// const saludo = saludar()
+// console.log (saludo)
 
 
 // CICLO
@@ -66,56 +66,54 @@ alert ("QUE TENGA BUEN DIA!")
 
 // ARRAYS - PRODUCTOS 
 
-let articulos = ["pulse 3d","xbox wireless","razer blackshark x usb","dualsense","consolas"]
+// let articulos = ["pulse 3d","xbox wireless","razer blackshark x usb","dualsense","consolas"]
 
-const articulo1 = {
-    marca: "Sony",
-    modelo: "Pulse 3d",
-    objeto: "auriculares",
-    año: 2022
-}
+// const articulo1 = {
+//     marca: "Sony",
+//     modelo: "Pulse 3d",
+//     objeto: "auriculares",
+//     año: 2022
+// }
 
-const articulo2 = {
-    marca: "Razer",
-    modelo: "BlackShark",
-    objeto: "auriculares",
-    año: 2022 
+// const articulo2 = {
+//     marca: "Razer",
+//     modelo: "BlackShark",
+//     objeto: "auriculares",
+//     año: 2022 
 
-}
+// }
 
-const articulo3 = {
-    marca: "Sony",
-    modelo: "Dualsense",
-    objeto: "mando",
-    año: 2022 
-}
+// const articulo3 = {
+//     marca: "Sony",
+//     modelo: "Dualsense",
+//     objeto: "mando",
+//     año: 2022 
+// }
 
-const articulo4 = {
-    marca: "Xbox",
-    modelo: "Series X",
-    objeto: "consola",
-    Almacenamiento: 1000,
-    año: 2022 
-}
+// const articulo4 = {
+//     marca: "Xbox",
+//     modelo: "Series X",
+//     objeto: "consola",
+//     Almacenamiento: 1000,
+//     año: 2022 
+// }
 
 
-const electronicos = [articulo1,articulo2,articulo3,articulo4]
+// const electronicos = [articulo1,articulo2,articulo3,articulo4]
 
-// console.log (electronico)
+// const AddElement = () => {
+//     const marca = prompt ("Eliga una marca Sony / Xbox / Razer")
+//     const modelo = prompt ("Eliga un modelo Dualsense / Series X / Pulse 3d")
+//     const objeto = prompt ("Eliga entre Auriculares / Mandos / Consola")
+//     const año = prompt ("Eliga un año 2022 / 2023")
 
-const AddElement = () => {
-    const marca = prompt ("Eliga una marca Sony / Xbox / Razer")
-    const modelo = prompt ("Eliga un modelo Dualsense / Series X / Pulse 3d")
-    const objeto = prompt ("Eliga entre Auriculares / Mandos / Consola")
-    const año = prompt ("Eliga un año 2022 / 2023")
-
-    const convocado = {
-        marca: marca,
-        modelo: modelo,
-        objeto: objeto,
-        año: año
-    }
-    electronicos.push(articulos)
-}
-AddElement ()
-console.log(articulos);
+//     const convocado = {
+//         marca: marca,
+//         modelo: modelo,
+//         objeto: objeto,
+//         año: año
+//     }
+//     electronicos.push(articulos)
+// }
+// AddElement ()
+// console.log(articulos);
