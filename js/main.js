@@ -64,108 +64,63 @@ while (tienda) {
 alert ("QUE TENGA BUEN DIA!")
 
 
-// ARRAYS - PRODUCTOS 
+// ARRAYS - PRODUCTOS  - CLASS
 
-// let articulos = ["pulse 3d","xbox wireless","razer blackshark x usb","dualsense","consolas"]
-
-// const articulo1 = {
-//     marca: "Sony",
-//     modelo: "Pulse 3d",
-//     objeto: "auriculares",
-//     año: 2022
-// }
-
-// const articulo2 = {
-//     marca: "Razer",
-//     modelo: "BlackShark",
-//     objeto: "auriculares",
-//     año: 2022 
-
-// }
-
-// const articulo3 = {
-//     marca: "Sony",
-//     modelo: "Dualsense",
-//     objeto: "mando",
-//     año: 2022 
-// }
-
-// const articulo4 = {
-//     marca: "Xbox",
-//     modelo: "Series X",
-//     objeto: "consola",
-//     Almacenamiento: 1000,
-//     año: 2022 
-// }
-
-
-// const electronicos = [articulo1,articulo2,articulo3,articulo4]
-
-// const AddElement = () => {
-//     const marca = prompt ("Eliga una marca Sony / Xbox / Razer")
-//     const modelo = prompt ("Eliga un modelo Dualsense / Series X / Pulse 3d")
-//     const objeto = prompt ("Eliga entre Auriculares / Mandos / Consola")
-//     const año = prompt ("Eliga un año 2022 / 2023")
-
-//     const convocado = {
-//         marca: marca,
-//         modelo: modelo,
-//         objeto: objeto,
-//         año: año
-//     }
-//     electronicos.push(articulos)
-// }
-// AddElement ()
-// console.log(articulos);
-
-
-// const auriculares1 = {
-//     marca: "Razer",
-//     modelo: "BlackShark",
-//     precio: 200,
-//     año: 2022 
-// }
-
-// const auriculares2 = {
-//     marca: "Sony",
-//     modelo: "Pulde 3D",
-//     precio: 250,
-//     año: 2022 
-// }
-
-// const mando1 = {
-//     marca: "Sony",
-//     modelo: "Dualsense",
-//     prec
-//     año: 2022 
-// }
-
-// const mando2 = {
-//     marca: "Xbox",
-//     modelo: "Wireless",
-//     objeto: "mando",
-//     año: 2022 
-// }
-
-// console.log (auriculares1)
-
-// function Auricular (modelo, marca, objeto, precio) {
-//     this.modelo = modelo,
-//     this.marca = marca,
-//     this.objeto = objeto
-//     this.precio = precio
-// }
-
-// CLASS
-
+const preciodolar = 1020
 class Auricular {
+    static id = 0
     constructor (marca, modelo, precio) {
+        this.id = ++Auricular.id
         this.modelo = modelo,
         this.marca = marca,
         this.precio = precio
     }
+
+    enpesos = () =>  {
+        this.precio = this.precio*preciodolar
+        console.log ("Precio en pesos: $" +this.precio)
+    }
+
 }
 
-const auriculares1 = new Auricular ("Sony", "Pulse 3D", 250)
-const auriculares2 = new Auricular ("Razer", "BlackShark", 350)
-console.log (auriculares1)
+const productos = []
+cargarproductos = () => {
+    let cargamarca = prompt ("Ingrese la marca de los productos")
+    let cargamodelo = prompt ("Ingrese el modelo de los productos")
+    let cargaprecio = parseInt (prompt ("Ingrese el precio de los productos en dolares"))
+
+    const auriculares = new Auricular (cargamarca, cargamodelo, cargaprecio)
+    console.log (auriculares)
+    productos.push (auriculares)
+}
+
+verproductos = () => {
+    if (productos.length ===0) {
+        console.log ("No hay productos añadidos")
+     } else {
+        for (const producto of productos) {
+            console.log (producto)
+        }
+     }
+}
+
+let menu = parseInt (prompt ("Ingrese 1 para ver el catalogo el articulos, ingrese 2 para cargar los articulos, ingrese 3 para salir"))
+
+while (menu !==3) {
+    switch (menu) {
+        case 1:
+            verproductos ()
+        break
+
+        case 2:
+            cargarproductos ()
+        break
+
+        default:
+            alert ("Opcion incorrecta")
+            break
+    }
+
+    menu = parseInt (prompt ("Ingrese 1 para ver el catalogo de productos, ingrese 2 para cargar los productos, ingrese 3 para salir"))
+
+}
