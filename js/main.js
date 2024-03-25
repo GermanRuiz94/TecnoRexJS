@@ -117,3 +117,55 @@ alert ("QUE TENGA BUEN DIA!")
 // }
 // AddElement ()
 // console.log(articulos);
+
+
+// const auriculares1 = {
+//     marca: "Razer",
+//     modelo: "BlackShark",
+//     precio: 200,
+//     año: 2022 
+// }
+
+// const auriculares2 = {
+//     marca: "Sony",
+//     modelo: "Pulde 3D",
+//     precio: 250,
+//     año: 2022 
+// }
+
+// const mando1 = {
+//     marca: "Sony",
+//     modelo: "Dualsense",
+//     prec
+//     año: 2022 
+// }
+
+// const mando2 = {
+//     marca: "Xbox",
+//     modelo: "Wireless",
+//     objeto: "mando",
+//     año: 2022 
+// }
+
+// console.log (auriculares1)
+
+// function Auricular (modelo, marca, objeto, precio) {
+//     this.modelo = modelo,
+//     this.marca = marca,
+//     this.objeto = objeto
+//     this.precio = precio
+// }
+
+// CLASS
+
+class Auricular {
+    constructor (marca, modelo, precio) {
+        this.modelo = modelo,
+        this.marca = marca,
+        this.precio = precio
+    }
+}
+
+const auriculares1 = new Auricular ("Sony", "Pulse 3D", 250)
+const auriculares2 = new Auricular ("Razer", "BlackShark", 350)
+console.log (auriculares1)
