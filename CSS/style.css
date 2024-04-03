@@ -4,22 +4,19 @@
     box-sizing: border-box;
 }
 
-.ImagenPrincipal {
-    width: 100%;
-    display: flex;
-}
+/*  HEADER  */
 
 header {
     display: flex;
-    background-color: #00aaa3;
+    background-color: blue;
 }
 
 li a.active,
 li a:hover {
-    background: #00aaa3;
+    background: #2089d7;
     transition: 0.5s;
     border: 1px solid black;
-    color: red;
+    color: black;
 }
 
 a {
@@ -36,23 +33,11 @@ ul {
     list-style-type: none;
 }
 
-.encabezado {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #00aaa3;
+.ImagenPrincipal {
+    width: 100%;
 }
-.encabezado .Menu__list {
-    float: right;
-    margin-right: 20px;
-}
-.encabezado .Menu__list__item {
-    color: black;
-    font-size: 15px;
-    padding: 7px 13px;
-    border-radius: 10px;
-    text-transform: uppercase;
-}
+
+/*  BODY  */
 
 body {
     margin: 0;
@@ -67,30 +52,8 @@ body {
     border-radius: 10px;
 }
 
-.Seccion {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 1500px;
-    margin: 0 auto;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-}
-
-.Seccion {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 1500px;
-    margin: 0 auto;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-}
-
 nav {
-    background-color: #038e83;
+    background-color: #602798;
     height: 85px;
     width: 100%;
 }
@@ -114,8 +77,54 @@ nav ul li a {
     text-transform: uppercase;
 }
 
+img {
+    width: 100%;
+}
+
+.Articulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: clamp(300px, 30%, 400px);
+}
+
+.Articulo-Sony, .Articulo-Xbox, .Articulo-Razer {
+    color: white;
+    display: none;
+}
+
+#products-container {
+    color: #2089d7;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+#cart-section {
+    color: white;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    gap: 1.5rem;
+    background-color: #602798;
+}
+
+.Productos-Titulo, .Carrito-Titulo {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 5rem;
+    color: #2089d7;
+    animation: tracking-in-expand 1s 0.7s both;
+}
+
+/* FOOTER   */
+
 .Footer {
-    background-color: black;
+    background-color: #602798;
     margin-top: 2rem;
     border-top: 2px solid white;
     display: flex;
@@ -141,19 +150,19 @@ footer div {
     border-top: 2px solid white;
     width: 100%;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .Horarios {
     font-size: 2rem;
     display: grid;
-    color: white;
+    color: black;
 }
 
 .Ubicacion {
     font-size: 2rem;
     display: grid;
-    color: white;
+    color: black;
     text-align: right;
     padding: 10px;
 }
@@ -172,30 +181,53 @@ footer div {
     width: 4rem;
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+/* TABLET */
+
+@media (max-width: 1120px) {
+    .enlace {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .Articulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: clamp(300px, 30%, 400px);
+    }
+
+    footer div {
+        justify-content: space-around;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .Redes {
+        display: none;
+    }
+
+    .Redes1 {
+        display: flex;
+    }
+
+    .Horarios {
+        font-size: 2rem;
+        text-align: center;
+        display: grid;
+    }
+
+    .Ubicacion {
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 
-img {
-    width: 100%;
-}
-
-.Articulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: clamp(300px, 30%, 400px);
-}
-
-.Productos-Titulo {
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 5rem;
-    color: #2089d7;
-    animation: tracking-in-expand 1s 0.7s both;
-}

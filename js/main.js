@@ -1,128 +1,83 @@
-//  FUNCION
-
-// function saludar () {
-//     return "BIENVENIDOS A TECNOREX"
-// }
-
-// const saludo = saludar()
-// console.log (saludo)
-
-
-// CICLO
-
-// let tienda = true
-
-// while (tienda) {
-//     let menu = parseInt(prompt("\n Ingrese 1 para comprar auriculares \n Ingrese 2 para comprar mandos \n Ingrese 3 para contactarnos \n Ingrese 4 para ver nuestros streamings"))
+const productos = [
+    {
+        id: 1,
+        nombre: "Consola Play Station 5",
+        precio: 500,
+        img : "./images/ps5-spideman2tiendafinal.jpg"
+    },
     
+    {
+        id: 2,
+        nombre: "Dualsense PS5",
+        precio: 70,
+        img: "./images/duaalsense.jpg"
+    },
 
-//     switch(menu) {
-//         case 1 : 
-        
-//         do {
-//             tienda = parseInt(prompt("Escriba cuantos auriculares quiere"))
-//             if (tienda>=0) {
-//                 console.log("Tenemos Stock")
-//             } else {
-//                 console.log("No tenemos Stock")
-//             }
-//         } while (tienda >= 0)
-//         break
+    {
+        id: 3,
+        nombre: "Auriculares Pulse 3D",
+        precio: 100,
+        img: "./images/Pulse-3d-tienda.jpg"
+    },
 
-//         case 2 : 
-        
-//         do {
-//             tienda = parseInt(prompt("Escriba cuantos mandos quiere"))
-//             if (tienda>=0) {
-//                 console.log("Tenemos Stock")
-//             } else {
-//                 console.log("No tenemos Stock")
-//             }
-//         } while (tienda >= 0)
-//         break
+    {
+        id: 4,
+        nombre: "Mando Xbox Series X",
+        precio: 70,
+        img: "./images/xbox-mando.jpg"
+    },
 
-//         case 3 : 
-//         console.log("NUESTRAS REDES  FACEBOOK: TECNOREX")
-//         break
-
-//         case 4 :
-//         console.log("TWITCH: @TECNOREXJUEGA")
-//         break
-
-//         default:
-//         console.log("ELIGUE UNA OPCION CORRECTA")
-//         break
-
-//     } 
+    {
+        id: 5,
+        nombre: "Auriculares Xbox Wireless",
+        precio: 200,
+        img: "./images/xbox-auris.jpg"
+    },
     
-//     let confirmar = prompt("Desea hacer otra consulta? (si/no)").toLowerCase()
-//     if (confirmar == "no") {
-//         tienda = false
-//         console.log("MUCHAS GRACIAS POR CONFIAR EN TECNOREX!")
-//     }
-// } 
-// alert ("QUE TENGA BUEN DIA!")
+    {
+        id: 6,
+        nombre: "Auriculares BlackShark V2 HyperSpeed",
+        precio: 150,
+        img: "./images/razer-blackshark-v2-hyperspeed.jpg"
+    },
+]
 
 
-// // ARRAYS - PRODUCTOS  - CLASS
+let cartProducts
+let cartProductsLS = localStorage.getItem("cartProducts")
+if (cartProductsLS) {
+    cartProducts = JSON.parse(cartProductsLS)
+}else {
+    cartProducts = []
+}
 
-// const preciodolar = 1020
-// class Auricular {
-//     static id = 0
-//     constructor (marca, modelo, precio) {
-//         this.id = ++Auricular.id
-//         this.modelo = modelo,
-//         this.marca = marca,
-//         this.precio = precio
-//     }
+let productsContainer = document.getElementById("products-container")
 
-//     enpesos = () =>  {
-//         this.precio = this.precio*preciodolar
-//         console.log ("Precio en pesos: $" +this.precio)
-//     }
+function renderProducto(productosArray) {
+    productosArray.forEach ((producto) => {
+        const card = document.createElement("div")
+        card.innerHTML = `<h3>${producto.nombre}</h3>
+                        <img src= "${producto.img}"                  
+                        <p>${producto.precio}</p>
+                        <button class="productoAgregar" id="${producto.id}">Agregar al carrito</button>
+                       `
+                        
+        productsContainer.appendChild(card)
+    })
+    addToCartButton ()
+}
+renderProducto(productos)
 
-// }
+function addToCartButton () {
+    let addbutton = document.querySelectorAll(".productoAgregar")
+    addbutton.forEach (button => {
+        button.onclick = (e) => {
+            const productId = e.currentTarget.id 
+            const selectedroduct = productos.find ((producto) => producto.id == productId)
+            cartProducts.push (selectedroduct)
+            console.log(cartProducts)
 
-// const productos = []
-// cargarproductos = () => {
-//     let cargamarca = prompt ("Ingrese la marca de los productos")
-//     let cargamodelo = prompt ("Ingrese el modelo de los productos")
-//     let cargaprecio = parseInt (prompt ("Ingrese el precio de los productos en dolares"))
-
-//     const auriculares = new Auricular (cargamarca, cargamodelo, cargaprecio)
-//     console.log (auriculares)
-//     productos.push (auriculares)
-// }
-
-// verproductos = () => {
-//     if (productos.length ===0) {
-//         console.log ("No hay productos añadidos")
-//      } else {
-//         for (const producto of productos) {
-//             console.log (producto)
-//         }
-//      }
-// }
-
-// let menu = parseInt (prompt ("Ingrese 1 para ver el catalogo el articulos, ingrese 2 para cargar los articulos, ingrese 3 para salir"))
-
-// while (menu !==3) {
-//     switch (menu) {
-//         case 1:
-//             verproductos ()
-//         break
-
-//         case 2:
-//             cargarproductos ()
-//         break
-
-//         default:
-//             alert ("Opcion incorrecta")
-//             break
-//     }
-
-//     menu = parseInt (prompt ("Ingrese 1 para ver el catalogo de productos, ingrese 2 para cargar los productos, ingrese 3 para salir"))
-
-// }
-
-
+            localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
+        }
+    })
+}
