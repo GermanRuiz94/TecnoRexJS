@@ -1,12 +1,17 @@
 :root {
-    --color-acento: red;
-    --color-acento-claro: grey;
+    --color-acento: rgb(19, 205, 252);
+    --color-acento-claro: #2089D7;
     --color-texto: black; 
 }
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
+    background-color: #2089D7;
+}
+
+.h1-titulo {
+    text-align: center;
 }
 
 h3, p {
