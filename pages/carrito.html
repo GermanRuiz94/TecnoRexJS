@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- CSS -->
-	<link rel="stylesheet" href="../css/style.css">
-  	<link rel="stylesheet" href="../css/carrito.css">
-	<!-- TOASTIFY -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-  	<!-- JS -->
-	<script src="../js/articulos.js" defer></script>
-  	<script src="../js/carritolocal.js" defer></script>
-	<script src="../js/carrito.js" defer></script>
-	<title>TecnoRex Carrito</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/carrito.css">
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- JS -->
+    <script src="../js/articulos.js" defer></script>
+    <script src="../js/carritolocal.js" defer></script>
+    <script src="../js/carrito.js" defer></script>
+    <title>TecnoRex Carrito</title>
 </head>
+
 <body>
-	<!-- HEADER -->
-	<header>
-		<nav>
-			<a href="../pages/index.html"><img src="../img/productos/LOGO-INICIO-PNG.png" alt="Logo" id="logo"></a>
-			<div>
-			
-				<a href="../pages/carrito.html" id="cart"><img src="../img/iconos/shopping-cart.png" alt=""><span id="cuenta-carrito">0</span></a>
-			</div>
-		</nav>
-	</header>
-	<h1 class="h1-titulo-carrito">CARRITO</h1>
-	<main>
-		<p id="carrito-vacio">Ups! El carrito está vacío, <a href="../pages/index.html">elige algunos productos</a></p>
-		<section id="cart-container">
-		</section>
-  <section id="totales">
-    <p>Total unidades: <span id="cantidad">0</span></p>
-    <p>Total precio: $<span id="precio">0</span></p>
-    <button id="comprar-carrito">Comprar</button>
-    <button id="reiniciar">Reiniciar</button>
-  </section>
-</main>
-<!-- FOOTER -->
-<footer class="Footer">
-	<div>
-		<p class="Horario Horarios">
-			<strong>Horario de atención:</strong>
-			Lunes a Viernes de 10 a 14 hs y 15 a 18 hs
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="../pages/index.html"><img src="../img/productos/LOGO-INICIO-PNG.png" alt="Logo" id="logo"></a>
+            <div>
 
-			Sabados de 10 a 13 hs
-		</p>
+                <a href="../pages/carrito.html" id="cart"><img src="../img/iconos/shopping-cart.png" alt=""><span
+                        id="cuenta-carrito">0</span></a>
+            </div>
+        </nav>
+    </header>
+    <h1 class="h1-titulo-carrito">CARRITO</h1>
+    <main>
+        <p id="carrito-vacio">Ups! El carrito está vacío, <a href="../pages/index.html">elige algunos productos</a></p>
+        <section id="cart-container">
+        </section>
+        <section id="totales">
+            <p>Total unidades: <span id="cantidad">0</span></p>
+            <p>Total precio: $<span id="precio">0</span></p>
+            <button id="comprar-carrito">Comprar</button>
+            <button id="reiniciar">Vaciar Carrito</button>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="Footer">
+        <div>
+            <p class="Horario Horarios">
+                <strong>Horario de atención:</strong>
+                Lunes a Viernes de 10 a 14 hs y 15 a 18 hs
 
-		<div class="Redes">
-			<img class="Whatsapp" src="../img/iconos/logoWhatsapp.png" alt="LogoWhatsapp">
-			<a href="https://api.whatsapp.com" target="_blank">Whatsapp</a>
+                Sabados de 10 a 13 hs
+            </p>
 
-			<img class="Instagram" src="../img/iconos/logoinstagram.png" alt="LogoInstagram">
-			<a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <div class="Redes">
+                <img class="Whatsapp" src="../img/iconos/logoWhatsapp.png" alt="LogoWhatsapp">
+                <a href="https://api.whatsapp.com" target="_blank">Whatsapp</a>
 
-			<img class="Facebook" src="../img/iconos/logofacebook.png" alt="LogoFacebook">
-			<a href="https://www.facebook.com" target="_blank">Facebook</a>
-		</div>
+                <img class="Instagram" src="../img/iconos/logoinstagram.png" alt="LogoInstagram">
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
 
-		<p class="Ubicacion Ubicaciones">
-			<strong>Donde nos encontramos</strong>
+                <img class="Facebook" src="../img/iconos/logofacebook.png" alt="LogoFacebook">
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            </div>
 
-			Azara 33, Barracas, CABA
-		</p>
-	</div>
+            <p class="Ubicacion Ubicaciones">
+                <strong>Donde nos encontramos</strong>
 
-	<div class="Redes1">
-		<img class="Whatsapp" src="../img/iconos/logoWhatsapp.png" alt="LogoWhatsapp">
-		<a href="">Whatsapp</a>
+                Azara 33, Barracas, CABA
+            </p>
+        </div>
 
-		<img class="Instagram" src="../img/iconos/logoinstagram.png" alt="LogoInstagram">
-		<a href="https://www.instagram.com">Instagram</a>
+        <div class="Redes1">
+            <img class="Whatsapp" src="../img/iconos/logoWhatsapp.png" alt="LogoWhatsapp">
+            <a href="">Whatsapp</a>
 
-		<img class="Facebook" src="../img/iconos/logofacebook.png" alt="LogoFacebook">
-		<a href="https://www.facebook.com">Facebook</a>
-	</div>
+            <img class="Instagram" src="../img/iconos/logoinstagram.png" alt="LogoInstagram">
+            <a href="https://www.instagram.com">Instagram</a>
 
-	<p class="Parrafo-Footer">
-		<strong>TecnoRex 2024 - Todos los derechos reservados</strong>
-	</p>
-</footer>
-<!-- SWEET ALERT -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<!-- TOASTIFY -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+            <img class="Facebook" src="../img/iconos/logofacebook.png" alt="LogoFacebook">
+            <a href="https://www.facebook.com">Facebook</a>
+        </div>
+
+        <p class="Parrafo-Footer">
+            <strong>TecnoRex 2024 - Todos los derechos reservados</strong>
+        </p>
+    </footer>
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>

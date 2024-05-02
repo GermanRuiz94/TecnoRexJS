@@ -69,6 +69,10 @@ function actualizarTotales() {
 }
 
 document.getElementById("reiniciar").addEventListener("click", () => {
+  Swal.fire({
+  title: "CARRITO VACIO",
+  icon: "success"
+});
   contenedorTarjetas.innerHTML = "";
   reiniciarCarrito();
   revisarMensajeVacio();
@@ -82,48 +86,14 @@ function revisarMensajeVacio() {
 }
 
 /** Opcion comprar para que elimine los productos del carrito */
-comprarcarritoElement.addEventListener("click", comprarbotonclicked)
+comprarcarritoElement.addEventListener("click", comprarbotonclick)
 
-function comprarbotonclicked () {
+function comprarbotonclick ()  {
+  Swal.fire({
+    title: "GRACIAS POR SU COMPRA",
+    icon: "success"
+  });
   contenedorTarjetas.innerHTML = "";
   reiniciarCarrito();
   revisarMensajeVacio();
 }
-
-/** Opcion comprar para que aparezca el cartel de productos comprados */
-// function botonagregar () {
-//   comprarboton = document.querySelectorAll("#comprar-carrito")
-//   comprarboton.forEach (boton => {
-//     boton.onclick = (e) => {
-//       Toastify({
-//         text: "Gracias por su compra",
-//         duration: 2000,
-//         destination: "https://github.com/apvarun/toastify-js",
-//         newWindow: true,
-//         close: false,
-//         gravity: "top", // `top` or `bottom`
-//         position: "center", // `left`, `center` or `right`
-//         stopOnFocus: false, // Prevents dismissing of toast on hover
-//         style: {
-//         background: "linear-gradient(to right, #3c7ebc, #3c7ebf)",
-//         },
-//         onClick: function(){} // Callback after click
-//       }).showToast();
-//     }
-//   })
-// }
-
-// Swal.fire({
-//   title: "desea vaciar el carrito?",
-//   showDenyButton: true,
-//   confirmButtonText: "Seguir comprando",
-//   denyButtonText: `Vaciar carrito`
-// }).then((result) => {
-//   /* Read more about isConfirmed, isDenied below */
-//   if (result.isConfirmed) {
-//     Swal.fire("Continuar comprando!", "Todos tus productos estan guardados", "success");
-//   } else if (result.isDenied) {
-//     Swal.fire("Carrito vacio", "selecciona los productos", "");
-//   }
-// });
-
