@@ -1,0 +1,32 @@
+ [
+    {
+      "id":1,
+      "nombre": "Play Station 5",
+      "precio": 1000
+    },
+    {
+      "id":2,
+      "nombre": "Dualsense",
+      "precio": 70
+    },
+    {
+      "id":3,
+      "nombre": "Pulse 3D",
+      "precio": 150
+    },
+    {
+      "id":4,
+      "nombre": "Mando Xbox",
+      "precio": 70
+    },
+    {
+      "id":5,
+      "nombre": "Auriculares Xbox Wireless",
+      "precio": 200
+    },
+    {
+      "id":6,
+      "nombre": "Auriculares Razer HyperSpeed",
+      "precio": 200
+    }
+  ]

@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- JS -->
-    <script  defer src="../js/articulos.js"></script>
-    <script  defer src="../js/index.js"></script>
-    <script  defer src="../js/carritolocal.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/index.css">
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<!-- JS -->
+	<script src="../js/articulos.js"  defer></script>
+	<script src="../js/carritolocal.js" defer></script>
 
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <title>TecnoRex</title>
+	<title>TecnoRex</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../pages/index.html"><img class="logo" src="../img/loo-negro.png" alt="Logo"></a>
-            <div>
-                <a href="../pages/carrito.html" class="cart"><img src="../img/shopping-cart.png" alt="Carrito"><span id="cuenta-carrito">0</span></a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1 class="h1-titulo">PRODUCTOS</h1>
-        <section id="productos-container"></section>
-    </main>
-    <footer class="Footer">
+	<!-- HEADER -->
+	<header>
+		<nav>
+			<a href="../pages/index.html"><img src="../img/productos/LOGO-INICIO-PNG.png" alt="Logo" id="logo"></a>
+			<div>
+		
+				<a href="../pages/carrito.html" id="cart"><img src="../img/iconos/shopping-cart.png" alt=""><span id="cuenta-carrito">0</span></a>
+			</div>
+		</nav>
+	</header>
+	<h1 class="h1-titulo-inicio">PRODUCTOS</h1>
+	<main>
+		<section id="productos-container">
+		</section>
+	</main>
+	<!-- FOOTER -->
+	<footer class="Footer">
         <div>
             <p class="Horario Horarios">
                 <strong>Horario de atención:</strong>
@@ -37,13 +42,13 @@
             </p>
 
             <div class="Redes">
-                <img class="Whatsapp" src="../img/logoWhatsapp.png" alt="LogoWhatsapp">
+                <img class="Whatsapp" src="../img/iconos/logoWhatsapp.png" alt="LogoWhatsapp">
                 <a href="https://api.whatsapp.com" target="_blank">Whatsapp</a>
 
-                <img class="Instagram" src="../img/logoinstagram.png" alt="LogoInstagram">
+                <img class="Instagram" src="../img/iconos/logoinstagram.png" alt="LogoInstagram">
                 <a href="https://www.instagram.com" target="_blank">Instagram</a>
 
-                <img class="Facebook" src="../img/logofacebook.png" alt="LogoFacebook">
+                <img class="Facebook" src="../img/iconos/logofacebook.png" alt="LogoFacebook">
                 <a href="https://www.facebook.com" target="_blank">Facebook</a>
             </div>
 
@@ -55,13 +60,13 @@
         </div>
 
         <div class="Redes1">
-            <img class="Whatsapp" src="../img/logoWhatsapp.png" alt="LogoWhatsapp">
+            <img class="Whatsapp" src="../img/iconos/logoWhatsapp.png" alt="LogoWhatsapp">
             <a href="">Whatsapp</a>
 
-            <img class="Instagram" src="../img/logoinstagram.png" alt="LogoInstagram">
+            <img class="Instagram" src="../img/iconos/logoinstagram.png" alt="LogoInstagram">
             <a href="https://www.instagram.com">Instagram</a>
 
-            <img class="Facebook" src="../img/logofacebook.png" alt="LogoFacebook">
+            <img class="Facebook" src="../img/iconos/logofacebook.png" alt="LogoFacebook">
             <a href="https://www.facebook.com">Facebook</a>
         </div>
 
@@ -69,5 +74,7 @@
             <strong>TecnoRex 2024 - Todos los derechos reservados</strong>
         </p>
     </footer>
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

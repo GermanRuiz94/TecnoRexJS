@@ -1,38 +1,40 @@
-const articulos = [
-    {
-      id:1,
-      nombre: "Play Station 5",
-      img: "../img/ps5-spideman2tiendafinal.png",
-      precio: 1000,
-    },
-    {
-      id:2,
-      nombre: "Dualsense",
-      img: "../img/duaalsense.png",
-      precio: 70,
-    },
-    {
-      id:3,
-      nombre: "Pulse 3D",
-      img: "../img/Pulse-3d-tienda.png",
-      precio: 200,
-    },
-    {
-      id:4,
-      nombre: "Mando XBOX",
-      img: "../img/xbox-mando.png",
-      precio: 70,
-    },
-    {
-      id:5,
-      nombre: "Auriculares Wireless XBOX",
-      img: "../img/xbox-auris.png",
-      precio: 250,
-    },
-    {
-      id:6,
-      nombre: "Auriculares Razer HyperSpeed",
-      img: "../img/razer-blackshark-v2-hyperspeed.png",
-      precio: 350,
+let contenedor = document.getElementById("productos-container")
+
+fetch("../db/data.json")
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(producto => {
+      const nuevoproducto = document.createElement("div");
+      nuevoproducto.classList = "tarjeta-producto"
+      nuevoproducto.innerHTML = `
+                                <img src="../img/productos/${producto.id}.png" alt="articulos">
+                                <h3>${producto.nombre}</h3>
+                                <p class="precio">$${producto.precio}</p>
+                                <button class="productoAgregar" id="${producto.id}">Agregar al carrito</button>`
+      contenedor.appendChild(nuevoproducto);
+      nuevoproducto.getElementsByTagName("button")[0].addEventListener("click", () => agregarAlCarrito(producto))
+    });
+    addtocartbutton()
+  })
+
+function addtocartbutton() {
+  addbutton = document.querySelectorAll(".productoAgregar")
+  addbutton.forEach(button => {
+    button.onclick = (e) => {
+      Toastify({
+        text: "Producto añadido al carrito",
+        duration: 2000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: false,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: false, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #3c7ebc, #3c7ebf)",
+        },
+        onClick: function () { } // Callback after click
+      }).showToast();
     }
-  ]
+  })
+}

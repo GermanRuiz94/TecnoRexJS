@@ -1,90 +1,91 @@
-:root {
-    --color-acento: rgb(19, 205, 252);
-    --color-acento-claro: #2089D7;
-    --color-texto: black; 
-}
 
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+:root{
+    --color-acento:#469cbe;
+    --color-acento-claro: #2e4fb967;
+    --color-texto: black;
+  }
+  
+  body{
     margin: 0;
-    background-color: #2089D7;
-}
-
-.h1-titulo {
-    text-align: center;
-}
-
-h3, p {
-    margin: 6px 0;
-}
-
-a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #469cbe;
+  }
+  
+  h3, p{
+    margin: 5px;
+  }
+  
+  .escondido{
+    display: none;
+  }
+  
+  a{
+    background-color: unset;
+    border:unset;
+    cursor:pointer;
     text-decoration: none;
+    transition: 200ms;
     color: var(--color-texto);
-}
-
-/* HEADER */
-
-a:hover:not(.cart) {
-    color: var(--color-acento);
-}
-
-button {
-    background-color: var(--color-acento);
-    color: white;
-    padding: 5px 10px;
-    border: unset;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-header {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.075);
-    padding: 10px 0;
-    
-}
-
-header nav {
+  }
+  
+  button{
+    transition: 200ms;
+  }
+  
+  a:hover:not(#cart), button:hover{
+    color: var(--color-acento-claro);
+  }
+  
+  /* Header */
+  header{
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.09);
+    margin-bottom: 10px;
+    font-size: larger;
+  }
+  
+  header nav{
     display: flex;
     justify-content: space-between;
     margin: 0 60px;
-}
-
-header nav div {
+  }
+  
+  #logo{
+    height: 40px;
+    margin: 20px;
+  }
+  
+  header nav div{
     display: flex;
     align-items: center;
-    gap: 30px;
-    position: relative;
-}
-
-header nav img {
+    gap: 40px;
+  }
+  
+  header nav img{
     height: 25px;
-}
-
-#cuenta-carrito {
-    background-color: var(--color-acento);
+  }
+  
+  #cuenta-carrito{
+    position: absolute;
+    background-color: var(--color-acento-claro);
     border-radius: 100%;
     display: inline-block;
-    width: 20px;
-    line-height: 20px;
+    height: 25px;
+    line-height: 25px;
     aspect-ratio: 1;
     text-align: center;
-    position: absolute;   
-}
-
-.logo {
-    height: 40px;
-}
-
-.esconder {
-    display: none;
-}
-
-/* FOOTER */
-
-.Footer {
-    background-color: #602798;
+  }
+  
+  .h1-titulo-inicio, .h1-titulo-carrito {
+    text-align: center;
+  }
+  
+  /* Footer */
+  
+  .Footer {
+    background-color: var(--color-acento-claro);
     margin-top: 2rem;
     border-top: 2px solid white;
     display: flex;
@@ -93,18 +94,18 @@ header nav img {
     align-items: center;
     padding: 1rem;
     
-}
-
-footer div {
+  }
+  
+  footer div {
     justify-content: space-evenly;
     width: 100%;
     display: flex;
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
-}
-
-.Parrafo-Footer {
+  }
+  
+  .Parrafo-Footer {
     font-size: 2rem;
     margin-top: 1rem;
     flex-wrap: wrap;
@@ -112,32 +113,60 @@ footer div {
     width: 100%;
     text-align: center;
     color: black;
-}
-
-.Horarios {
+  }
+  
+  .Horarios {
     font-size: 2rem;
     display: grid;
     color: black;
-}
-
-.Ubicacion {
+  }
+  
+  .Ubicacion {
     font-size: 2rem;
     display: grid;
     color: black;
     text-align: right;
     padding: 10px;
-}
-
-.Redes {
+  }
+  
+  .Redes {
     display: flex;
-}
-
-.Redes1 {
+  }
+  
+  .Redes1 {
     display: none;
-}
-
-.Facebook,
-.Instagram,
-.Whatsapp {
+  }
+  
+  .Facebook,
+  .Instagram,
+  .Whatsapp {
     width: 4rem;
-}
+  }
+  
+  
+  /* TABLET - MOBILE */
+  @media (max-width: 1120px) {
+    footer div {
+      justify-content: space-around;
+      width: 100%;
+      display: grid;
+      align-items: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .Redes {
+      display: none; }
+    .Redes1 {
+      display: flex; }
+    .Horarios {
+      font-size: 2rem;
+      text-align: center;
+      display: grid; }
+    .Mapa {
+      display: flex;
+      margin: auto; }
+    .Ubicacion {
+      font-size: 2rem;
+      text-align: center; }
+  }
+  
+  
